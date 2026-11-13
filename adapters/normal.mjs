@@ -1,0 +1,1 @@
+let text='';for await(const chunk of process.stdin)text+=chunk;const input=JSON.parse(text);for(const item of input.input.items)process.stdout.write(JSON.stringify({type:'record',value:item})+'\n');process.stdout.write(JSON.stringify({type:'end',count:input.input.items.length})+'\n');

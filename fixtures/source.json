@@ -1,0 +1,11 @@
+{
+  "adapters": [
+    "normal",
+    "sleep",
+    "endless",
+    "logs",
+    "partial",
+    "child"
+  ],
+  "protocol": 1
+}

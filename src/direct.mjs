@@ -1,0 +1,2 @@
+import {spawn} from 'node:child_process';
+export async function direct(input){return new Promise((resolve,reject)=>{const processHandle=spawn(process.execPath,[new URL('../adapters/normal.mjs',import.meta.url).pathname]);let text='';processHandle.stdout.on('data',chunk=>text+=chunk);processHandle.on('error',reject);processHandle.on('close',code=>code?reject(new Error('适配器失败')):resolve(text));processHandle.stdin.end(JSON.stringify({protocol:1,input}));});}
