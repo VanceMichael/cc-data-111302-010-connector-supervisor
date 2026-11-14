@@ -7,9 +7,10 @@
     "node": ">=22.22.1"
   },
   "scripts": {
-    "test": "node --test",
+    "test": "node --test test/source.test.mjs test/startup.test.mjs test/executor.test.mjs test/runner.test.mjs test/ops.test.mjs",
     "build": "node scripts/check.mjs",
     "start": "node src/serve.mjs",
+    "supervise": "node src/supervisor.mjs",
     "demo": "node src/demo.mjs"
   }
 }
